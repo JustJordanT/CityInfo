@@ -1,0 +1,65 @@
+JustJordanT/JustJordanT		public	2022-06-29T01:25:05Z
+JustJordanT/btctl	btctl: Command utility used for interacting with BasisTheory services.	private	2022-06-24T20:58:01Z
+JustJordanT/jt-hashnode		public	2022-06-23T21:37:27Z
+JustJordanT/GoSoftwareEngineering	Go and the world of software engineering	public	2022-06-08T04:55:48Z
+JustJordanT/personal-domains	a minimal pulumi project to manage dns records.	private	2022-06-02T03:15:22Z
+JustJordanT/selfserve-under-construction	sefl-serve.io (under construction) page	private	2022-06-02T02:48:12Z
+JustJordanT/pulumi-go-docker	a minimal go application using go.	public	2022-05-31T03:26:15Z
+JustJordanT/jt-engineering	Obsidian Vault for jt-engineering	private	2022-05-31T02:51:13Z
+JustJordanT/GoWithTest	A follow along with learning go with tests.	public	2022-05-30T13:35:23Z
+JustJordanT/links-jt	Personal Link Repo	public	2022-05-30T01:19:20Z
+JustJordanT/CSharpWithTests	Learning GO With Tests	public	2022-05-28T13:54:09Z
+JustJordanT/pulumi-basistheory		public	2022-05-26T04:07:31Z
+JustJordanT/pulumi-docker-example	A minimal C# pulumi project; show how to start and run containers.	public	2022-05-21T18:41:18Z
+JustJordanT/GraphMailer	A minimal helper project for Microsoft Graph API	public	2022-05-19T15:23:34Z
+JustJordanT/wicked-shell-scripts		public	2022-05-16T12:26:28Z
+JustJordanT/LearnPulumi	A minimal project learning basics of pulumi	public	2022-04-26T20:57:22Z
+JustJordanT/gautamkrishnar	Yet another GitHub profile readme :smiley:	public, fork	2022-04-06T15:24:08Z
+JustJordanT/learn-cSharp-with-tests	Learn Go with test-driven development	public, fork	2022-04-02T01:50:56Z
+JustJordanT/NFT-POPUP	NFT POPUP Food Truck. Eat and get an NFT.	private	2022-03-14T15:29:07Z
+JustJordanT/pulumi-state-manager	a minimal c# project to manage pulumi state 🗂.	private	2022-02-28T17:06:51Z
+JustJordanT/airbnb-clone		private	2022-01-18T17:33:04Z
+JustJordanT/dotnet.piper	A lossless compression platform.	public	2021-12-31T02:41:28Z
+JustJordanT/.config	My Minimal .config file for my macOS, nVIM, iterm, coc	public	2021-12-07T21:26:39Z
+JustJordanT/yourCRM	🕸 .NET Clean Architecture, but for Microservices project. It uses Minimal Clean Architecture with DDD-lite, CQRS-lite, and just enough Cloud-native patterns apply on the simple OpenERP running on Tye with Dapr extension 🍻	public	2021-12-06T16:25:21Z
+JustJordanT/example-dns-dev-stack		public	2021-11-17T15:20:54Z
+JustJordanT/example_dev_stack	A minimal Dev stack using pulumi	public	2021-11-15T21:39:30Z
+JustJordanT/platform-operations	A 🧃 minimal 🐍 Python Project to manage you GitHub Policies	public	2021-10-27T02:53:59Z
+JustJordanT/cloudFileUploader	☁️ CloudFileUploader: is a service that will allow you to upload your file to an Azure storage account, and also pull files down and list them, out as well. Made with microservice architecture in mind along with best coding practices.	public	2021-10-15T16:43:45Z
+JustJordanT/platform_Pulumi	A Minimal 🦐 Pulumi Project for GH 📄 Policy.	public	2021-10-14T16:15:29Z
+JustJordanT/myGitActions	Testing out Git Actions	public	2021-10-09T16:42:51Z
+JustJordanT/my_website		public	2021-09-02T13:12:22Z
+JustJordanT/my_website_theme		public	2021-09-01T21:33:11Z
+JustJordanT/novela-hugo-starter		public	2021-08-31T00:37:10Z
+JustJordanT/my-mixcore-blog		public	2021-08-22T00:05:30Z
+JustJordanT/my-minimal-blog		public	2021-08-21T16:52:51Z
+JustJordanT/my-gatsbyjs-blog	A high performance skeleton starter for GatsbyJS with an advanced feature set.	public, fork	2021-08-21T16:30:35Z
+JustJordanT/JordansBlogSite		private	2021-08-20T14:07:08Z
+JustJordanT/my-gatsby-site		public	2021-08-20T12:59:01Z
+JustJordanT/CS61b	https://inst.eecs.berkeley.edu/~cs61b/sp20/index.html	public	2021-08-18T19:56:02Z
+JustJordanT/Frankenblog	A Frankenblog template for folks coming from a .NET background who want to blog using Jekyll	public, fork	2021-08-16T18:31:20Z
+JustJordanT/Csharp-OOP		public	2021-08-09T14:30:25Z
+JustJordanT/EFCore_ContosoUniversaty		public	2021-08-02T16:11:12Z
+JustJordanT/Windows_11_Emjois	😜☁️⛅⛈️🌪️ This is an ongoing collection of the new Windows 11 Emoji set. Please note that these are PNG images and not editable SVGs. The emojis list will be updated with time. I am not associated with Microsoft. Just sharing for project use.	public	2021-08-02T11:42:44Z
+JustJordanT/GitSubWebUI		public	2021-07-31T01:28:35Z
+JustJordanT/GitSubAssets		public	2021-07-31T01:11:27Z
+JustJordanT/OpenTime	⏳ OpenTime is a Clock in and out, time manager for tracking employee time.	public	2021-07-30T00:52:12Z
+JustJordanT/RetailManager		private	2021-07-28T14:51:31Z
+JustJordanT/mix123456	ASP.NET mix core cms	public	2021-07-16T03:55:35Z
+JustJordanT/sessionsConnections		public	2021-07-16T02:00:27Z
+JustJordanT/TodoCRUDApp		public	2021-07-15T12:06:22Z
+JustJordanT/blogMarkdown		private	2021-07-12T12:45:23Z
+JustJordanT/gettingStartedWithCsharp		public	2021-07-11T14:54:56Z
+JustJordanT/azureDeveloper		public	2021-07-03T06:26:54Z
+JustJordanT/pickACardUI	Random Card Picker with UI	public	2021-06-24T17:48:19Z
+JustJordanT/cSharpSoftwareEngineerRoadmap	Roadmap for becoming a cSharp Software Engineer.	public	2021-06-23T16:47:16Z
+JustJordanT/2021Learning		private	2021-06-23T15:29:09Z
+JustJordanT/wpfMatchGame	Animal Emoji Match Game	public	2021-06-23T11:48:07Z
+JustJordanT/azure-docs	Open source documentation of Microsoft Azure	public, fork	2021-06-21T20:53:32Z
+JustJordanT/docs	This repository contains .NET Documentation.	public, fork	2021-06-07T20:21:58Z
+JustJordanT/algebraic-functions		public	2021-05-06T01:57:08Z
+JustJordanT/IMDB_Analysis	This data set contains information about 10,000 movies collected from The Movie Database (TMDb), including user ratings and revenue.	public	2021-05-05T20:17:11Z
+JustJordanT/covid-19-texas		public	2021-05-05T20:11:03Z
+JustJordanT/Exploring-Weather-Treands		public	2021-05-03T21:08:20Z
+JustJordanT/100-days-of-code	Fork this template for the 100 days journal - to keep yourself accountable (multiple languages available)	public, fork	2020-09-26T02:40:10Z
+JustJordanT/WGU-CS		private	2020-07-03T06:06:56Z
