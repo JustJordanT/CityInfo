@@ -12,11 +12,11 @@ public class CitiesDataStore
     {
         Cities = new List<CityDto>
         {
-            new CityDto()
+            new()
             {
                 Id = 1,
                 Name = " New York City ",
-                Description = " The one with that big park . ",
+                Description = "The one with that big park.",
                 PointsOfInterest = new List<PointOfInterestDto>
                 {
                     new PointOfInterestDto
@@ -33,7 +33,7 @@ public class CitiesDataStore
                     }
                 }
             },
-            new CityDto()
+            new()
             {
                 Id = 2,
                 Name = " Antwerp ",
@@ -54,7 +54,7 @@ public class CitiesDataStore
                     }
                 }
             },
-            new CityDto()
+            new()
             {
                 Id = 3,
                 Name = " Paris ",

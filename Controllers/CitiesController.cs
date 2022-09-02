@@ -1,4 +1,6 @@
+using AutoMapper;
 using CityInfo.API.Models;
+using CityInfo.API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CityInfo.API.Controllers;
@@ -7,29 +9,46 @@ namespace CityInfo.API.Controllers;
 [Route("/api/cities")]
 public class CitiesController : ControllerBase
 {
-    private readonly CitiesDataStore _citiesDataStore;
+    private readonly ICityInfoRepository _cityInfoRepository;
+    private readonly IMapper _mapper;
 
-    public CitiesController(CitiesDataStore citiesDataStore)
+    public CitiesController(ICityInfoRepository citiesInfoRepository, IMapper mapper)
     {
-        _citiesDataStore = citiesDataStore ?? throw new ArgumentNullException(nameof(citiesDataStore));
+        _cityInfoRepository = citiesInfoRepository ?? throw new ArgumentNullException(nameof(citiesInfoRepository));
+        _mapper = mapper?? throw new ArgumentNullException(nameof(mapper));
     }
     
     [HttpGet]
-    public ActionResult<IEnumerable<CityDto>> GetGetCities()
+    public async Task<ActionResult<IEnumerable<CityWithoutPointsOfInterestDto>>> GetCities()
     {
-        return Ok(_citiesDataStore.Cities);
+        var cityEntities = await _cityInfoRepository.GetCitiesAsync();
+        var results = new List<CityWithoutPointsOfInterestDto>(); 
+        
+        // var results = cityEntities.Select(cityEntity => new CityWithoutPointsOfInterestDto { Id = cityEntity.Id, Name = cityEntity.Name, Description = cityEntity.Description, }).ToList();
+        foreach (var cityEntity in cityEntities)
+        {
+            results.Add(new CityWithoutPointsOfInterestDto
+            {
+                Id = cityEntity.Id,
+                Name = cityEntity.Name,
+                Description = cityEntity.Description,
+            });
+        }
+
+        return Ok(results);
     }
 
-    [HttpGet("{id}")]
-    public ActionResult<CityDto> GetCity(int id)
-    {
-        var cityToReturn = _citiesDataStore.Cities.
-            FirstOrDefault(c => c.Id == id);
-        if (cityToReturn == null)
-        {
-            return NotFound();
-        }
-        
-        return Ok(cityToReturn);
-    }
+    // [HttpGet("{id}")]
+    // public ActionResult<CityDto> GetCity(int id)
+    // {
+    //     
+    //     var cityToReturn = _cityInfoRepository.GetCityAsync()
+    //         FirstOrDefault(c => c.Id == id);
+    //     if (cityToReturn == null)
+    //     {
+    //         return NotFound();
+    //     }
+    //     
+    //     return Ok(cityToReturn);
+    // }
 }
