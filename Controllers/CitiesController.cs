@@ -2,6 +2,8 @@ using AutoMapper;
 using CityInfo.API.Models;
 using CityInfo.API.Services;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace CityInfo.API.Controllers;
 
@@ -11,7 +13,9 @@ public class CitiesController : ControllerBase
 {
     private readonly ICityInfoRepository _cityInfoRepository;
     private readonly IMapper _mapper;
-
+    private const int maxCitiesPageSize = 20;
+    
+    
     public CitiesController(ICityInfoRepository citiesInfoRepository, IMapper mapper)
     {
         _cityInfoRepository = citiesInfoRepository ?? throw new ArgumentNullException(nameof(citiesInfoRepository));
@@ -19,36 +23,37 @@ public class CitiesController : ControllerBase
     }
     
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<CityWithoutPointsOfInterestDto>>> GetCities()
+    public async Task<ActionResult<IEnumerable<CityWithoutPointsOfInterestDto>>> 
+        GetCities([FromQuery]string? name, string? searchQuery, int pageNumber = 1, int pageSize = 10)
     {
-        var cityEntities = await _cityInfoRepository.GetCitiesAsync();
-        var results = new List<CityWithoutPointsOfInterestDto>(); 
-        
-        // var results = cityEntities.Select(cityEntity => new CityWithoutPointsOfInterestDto { Id = cityEntity.Id, Name = cityEntity.Name, Description = cityEntity.Description, }).ToList();
-        foreach (var cityEntity in cityEntities)
+        if (pageSize > maxCitiesPageSize)
         {
-            results.Add(new CityWithoutPointsOfInterestDto
-            {
-                Id = cityEntity.Id,
-                Name = cityEntity.Name,
-                Description = cityEntity.Description,
-            });
+            pageSize = maxCitiesPageSize;
         }
-
-        return Ok(results);
+        
+        var (cityEntities, paginationMetadata) = await _cityInfoRepository.GetCitiesAsync(
+            name, searchQuery, pageNumber, pageSize);
+        
+        Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(paginationMetadata));
+        
+        return Ok(_mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>>(cityEntities));
     }
 
-    // [HttpGet("{id}")]
-    // public ActionResult<CityDto> GetCity(int id)
-    // {
-    //     
-    //     var cityToReturn = _cityInfoRepository.GetCityAsync()
-    //         FirstOrDefault(c => c.Id == id);
-    //     if (cityToReturn == null)
-    //     {
-    //         return NotFound();
-    //     }
-    //     
-    //     return Ok(cityToReturn);
-    // }
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetCity(int id, bool includePointsOfInterest = false)
+        // TODO Look into the difference between ActionResult and IActionResult. 
+    {
+        var city = await _cityInfoRepository.GetCityAsync(id, includePointsOfInterest);
+        
+        if (city == null)
+        {
+            return NotFound();
+        }
+        if (includePointsOfInterest)
+        {
+            return Ok(_mapper.Map<CityDto>(city));
+        }
+
+        return Ok(_mapper.Map<CityWithoutPointsOfInterestDto>(city));
+    }
 }
